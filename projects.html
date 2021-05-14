@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <title>Misiker Tadesse Aga</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="links"></div>
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <h1>Misiker Tadesse<span class="alternate_colour"> Aga</span></h1>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="tab_selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resources/CV_Misiker.pdf">CV</a></li>
+          <li  class="tab_selected"><a href="projects.html">Past Projects</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+
+      <div id="panel"><img src="style/panel_1.jpg" alt="tree tops" /></div>
+      <div id="content">
+        <div>
+          <h2 style="padding: 20px 0 5px 0;"> <b>Smokestack: Thwarting DOP Attacks with Runtime Stack Layout Randomization</b> </h2>
+          <div class="row">
+            <div class="column">
+              <img src="resources/Smokestack.png" alt="Snow" style="width:37%" align="left" >
+            </div>
+            <div>
+              <p style="margin-left:420px; margin-top:10px; margin-right:50px;" align="justify">In this work, we evaluate the effectiveness of previously proposed stack layout randomization techniques at stopping real-world DOP exploits. We show that previous stack-layout protections can be easily overcome by DOP attacks. To address this deficiency, we present Smokestack, a runtime stack-layout randomization technique that randomizes function stack layout at each invocation, using a true random permutation selection that is protected against memory disclosure attacks. Using these defenses, Smokestack is able to thwart proposed and real-world DOP attacks. We implemented Smokestack in the LLVM compiler framework. Our implementation provides a secure random permutation, at function invocation, using an intrusion-resistant pseudo-random number generator (based on the Intel AES-NI instruction set extensions), which is seeded from a true random number source </p>
+            </div>
+        </div>
+        <div>
+          <h2 style="padding: 20px 0 5px 0;"> <b>Wrangling in the Power of Code Pointers with ProxyCFI</b> </h2>
+          <div class="row">
+            <div class="column">
+              <img src="resources/ProxyCFI.png" alt="Snow" style="width:32%" align="left" >
+            </div>
+            <div>
+              <p style="margin-left:420px; margin-top:10px; margin-right:50px;" align="justify">In this work, we make the key observation that many of the vulnerabilities in control flow stem from the excessive power inherent in code pointers. To stop the tide of control flow attacks, we propose a novel approach to control flow integrity, called ProxyCFI, that replaces all code pointers in the program with pointer proxies. A pointer proxy is a unique random identifier (64-bits in our implementation), which represents a forward or backward control flow edge in the program. Consequently, all indirect jumps in the program (e.g., returns and jumps-through-register) are replaced with multi-way branches that implement a direct jump to the address associated with the pointer proxy. As pointer proxies are a function of both the source and the target of an edge, swapping pointer proxies results in a violation even if they have the same target.
+
+              To ensure that all execution flows stay on the program CFG for even third-party ProxyCFI compliant code, a binary-level program verifier first validates at load-time that programs and libraries have CFGs that are fully discoverable, use only pointer proxies, and avoid all indirect jumps/returns. Finally, to thwart attacks based on binary analysis, the verifier re-randomizes pointer proxies at load time. In addition, the loader marks code sections unreadable, to protect from active-read attacks that gather pointer proxies using memory leaks.</p>
+            </div>
+        </div>
+        <div>
+          <h2 style="padding: 20px 0 5px 0;"> <b>Analyzing Sources of Tail Latency in Mcrouter</b> </h2>
+          <div class="row">
+            <div class="column">
+              <img src="resources/mcrouter.png" alt="Snow" style="width:32%" align="left" >
+            </div>
+            <div>
+              <p style="margin-left:420px; margin-top:10px; margin-right:50px;" align="justify">To meet expected quality of service web applications are required to have a a quick response time, typically less than 100ms. However, it is likely that a single request can generate several sub-queries which can face varying latencies with the worst case latency determining the overall aggregate response time. For large scale applications like Facebook, this can be exacerbated by another layer of indirection introduced by the middle tier proxies used to scale these applications. We analyzed the sources of tail latency in Mcrouter, Facebook's Memcached protocol router. Our experiment shows that Mcrouter scales well with Memcache for an average case. However the tail latency of Mcrouter is worse, service time between the 99th and 99.99th percentile request for Mcrouter being orders of magnitude longer  than Memcached.
+              </p>
+            </div>
+        </div>
+        <div>
+          <h2 style="padding: 20px 0 5px 0;"> <b>Cold Boot Attacks are Still Hot: Security Analysis of Memory Scramblers in Modern Processors</b> </h2>
+          <div class="row">
+            <div class="column">
+              <img src="resources/coldboot.png" alt="Snow" style="width:50%" align="left" >
+            </div>
+            <div>
+              <p style="margin-left:600px; margin-top:10px; margin-right:50px;" align="justify">In this work we show an analysis of memory scramblers in modern Intel CPUs and demonstrate that they do not provide any significant security measures against cold boot attacks despite the extra features built into them. We present an empirical analysis of data transformations performed by scramblers in modern Intel CPUs.We develop and demonstrate a straightforward means to descramble the memory of late-model Intel architecture machines, by exploiting the memory correlations that they create due to a limited number of scrambler keys. Using our descrambler tool, we are able to cold boot attack both Windows and Linux based systems, revealing their TrueCrypt master keys. </p>
+
+              <p>The news is not all bad, however, we show analyses that confirm that modern encryption implementations have become sufficiently streamlined that it is now possible to completely overlap encryption keystream generation with DRAM column access latency, thereby enabling the creation of strongly encrypted DRAMs with zero exposed latency for encryption and decryption. Adopting these measures could shut down cold boot attacks for good.Our analysis shows hardware cipher performance results that suggest the time right for hardware vendors to begin using strong encryption for DRAM memory. We show that an AES hardware cipher in counter mode can fully overlap encryption with the column accesses to a DDR4 DRAM module, leaving no exposed latency for strongly encrypted DRAM.</p>
+            </div>
+        </div>
+        <div>
+          <h2 style="padding: 20px 0 5px 0;"> <b>Mitigating Rowhammer Attacks using Intel RDT</b> </h2>
+          <div class="row">
+            <div class="column">
+              <img src="resources/rdt.png" alt="Snow" style="width:42%" align="left" >
+            </div>
+            <div>
+              <p style="margin-left:480px; margin-top:10px; margin-right:50px;" align="justify">In this work, we demonstrate that Intel's Cache Allocation Technology (CAT) can be abused  perform rowhammer attack that bypasses all the widely deployed rowhammer protections, even when they are used in tandem. We demonstrate a single-sided server-side rowhammer attack which is able to rowhammer DDR4 DRAMs with double refresh (32ms), restricted pagemaps and disabled cache-flush instructions. We accomplish this goal by utilizing CAT on an Intel Xeon processor to restrict the LLC to 4-ways or less, which significantly speeds up our CLFLUSH-free attack.
+              </p>
+              <p style="margin-left:480px; margin-top:10px; margin-right:50px;" align="justify"> We also show that Intel's Cache Monitoring Technology (CMT) and Memory Bandwidth Monitoring statistics can be used to effectively detect rowhammer attacks based on their unique characteristics which differentiates them from benign applications.
+              </p>
+            </div>
+        </div>
+
+      </div>
+
+
+    <div id="site_content_bottom"></div>
+    </div>
+
+    <div id="footer">Copyright &copy; Misiker T. Aga. All Rights Reserved. | <a href="http://www.squidfingers.com">pattern from squidfingers</a> | <a href="http://validator.w3.org/check?uri=referer">XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a href="http://www.dcarter.co.uk">design by dcarter</a></div>
+  </div>
+</body>
+</html>
